@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$6dpy5ys^hvo=rks9hu-&ue+mrwk$augi8zg@s^-9d1%abvju6'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'django2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django2',
-        'USER': 'vinicius',
-        'PASSWORD': 'vinicius12',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': '334cHBDGeFCa42AhcDde3D4GaBaFb1bD',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '58071',
     }
 }
 
@@ -117,7 +117,7 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
